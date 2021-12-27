@@ -1,6 +1,6 @@
 import React from "react";
 import './Menu.css';
-import carrito from "./carrito.png";
+import CartWidget from "./CartWidget";
 
 function Menu (){
     return (
@@ -23,7 +23,7 @@ function Menu (){
                         <a href="contacto.html">Contacto</a>            
                     </li>
                     <li>
-                        <img src={carrito} className="carrito"/>
+                        <CartWidget/>
                     </li>
               
                 </ul>
