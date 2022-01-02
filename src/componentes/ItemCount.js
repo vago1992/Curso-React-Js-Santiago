@@ -3,16 +3,17 @@ import { useState, useEffect } from 'react';
 import './Menu.css';
  
 
+export default function ItemCount(stock) {
 
-export default function ItemCount() {
-    const stock=10
     const [count,setCount]= useState(1)
+
 
     //const count=0
     const handleCount=()=>{
-        if (count<stock){
+        if (count<stock.stock){
             //     count=count+1;
             setCount(count+1)
+
             //setFechaYHora(Date)
         }
     
