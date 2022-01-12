@@ -44,12 +44,12 @@ p{
     margin-left: 4px;
     margin-bottom: 4px;
 }
-.fotoProducto{
-    height: 60px;
-    width: 80px;
-    margin-bottom: 5px;
-}
+
 .itemList{
-    margin-right: 100px;
+    margin-left: 550px;
     margin-top: 10px;
+}
+.botonProd{
+    
+    margin-top: 5px;
 }

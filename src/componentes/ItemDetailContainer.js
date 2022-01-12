@@ -1,19 +1,16 @@
 import React from 'react'
-import ItemCount from './ItemCount'
-import Saludo from './Saludo'
 import { useState, useEffect } from 'react'
 import { Products } from './mocks/products'
-import { ItemList } from './itemList'
-import ItemDetailContainer from './ItemDetailContainer'
+import ItemDetail from "./ItemDetail"
 
 
 
-export default function ItemListContainer() {
-    const[productos,setProductos]=useState([])
+export default function ItemDetailContainer() {
+    const[producto,setProducto]=useState({})
     const[loading,setLoading]=useState(true)
     useEffect(() => {
         Products
-        .then(resp=>setProductos(resp))
+        .then(resp=>setProducto(resp.find(prod=>prod.id==="1")))
         .catch(err=>console.log(err))
         .finally(()=>setLoading(false))
     }, [])
@@ -23,9 +20,8 @@ export default function ItemListContainer() {
             {loading ? (
                 <h2>Cargando...</h2> 
             ):(
-                <><Saludo saludo="Bienvenidos a mi E-Comerce" />
-                <ItemCount stock={10} />
-                <ItemList productos={productos} />
+                <>
+                <ItemDetail producto={producto} />
                 </>
             )}
         </div>

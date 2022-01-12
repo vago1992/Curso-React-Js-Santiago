@@ -1,22 +1,36 @@
 import './App.css';
 import Menu from './componentes/Menu';
 import ItemListContainer from './componentes/ItemListContainer';
+import {BrowserRouter,Routes,Route} from "react-router-dom"
+import CartWidget from './componentes/CartWidget';
+import ItemDetailContainer from './componentes/ItemDetailContainer';
 
 
 function App() {
   
   return (
-    
-    <div className="App">
-      {/*
-      <Menu item={ItemListContainer}>
-      </Menu>  */}
+    <div>
       <Menu/>
       <ItemListContainer/>
-      
+      <ItemDetailContainer/>
+    </div>
+    /*
+    <BrowserRouter className="App">
+   
+      <Menu/>
+      <Routes>
+        <Route exact path="/CartWidget/:idCategoria" element={<CartWidget/>}/>
+        <Route exact path="/" element={ <ItemListContainer/>}/>
+
+
+       
+      </Routes>    
+      <ItemDetailContainer/>
+  
       
 
-    </div>
+    </BrowserRouter>*/
+    
   );
 }
 
@@ -32,7 +46,7 @@ export default App;
     .then(resp=>setPoke(resp.results))
 
   }, [])
-  console.log(poke)
+  console.log(poke)*/
 
 
-*/
+

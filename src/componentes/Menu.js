@@ -23,7 +23,10 @@ function Menu (){
                         <a href="contacto.html">Contacto</a>            
                     </li>
                     <li>
+                        
                         <CartWidget/>
+
+                        
                     </li>
               
                 </ul>
