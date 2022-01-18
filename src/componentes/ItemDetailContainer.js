@@ -2,15 +2,18 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { Products } from './mocks/products'
 import ItemDetail from "./ItemDetail"
+import { useParams } from 'react-router-dom'
 
 
 
 export default function ItemDetailContainer() {
     const[producto,setProducto]=useState({})
     const[loading,setLoading]=useState(true)
-    useEffect(() => {
+    const{idDetalle}=useParams()
+
+    useEffect(() => {     
         Products
-        .then(resp=>setProducto(resp.find(prod=>prod.id==="1")))
+        .then(resp=>setProducto(resp.find(prod=>prod.id===idDetalle)))
         .catch(err=>console.log(err))
         .finally(()=>setLoading(false))
     }, [])

@@ -9,11 +9,18 @@ import ItemDetailContainer from './componentes/ItemDetailContainer';
 function App() {
   
   return (
-    <div>
+    <BrowserRouter className="App">
       <Menu/>
-      <ItemListContainer/>
-      <ItemDetailContainer/>
-    </div>
+      <Routes>
+        <Route exact path="/" element={<ItemListContainer/>}/>
+        <Route exact path="/categoria/:idCategoria" element={<ItemListContainer/>}/>
+        <Route exact path="/CartWidget/:idCategoria" element={<CartWidget/>}/>
+        <Route exact path="/detalle/:idDetalle" element={<ItemDetailContainer/>}/>
+
+      </Routes>
+
+      
+    </BrowserRouter>
     /*
     <BrowserRouter className="App">
    
