@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import './Menu.css';
  
 
+
+
 export default function ItemCount(stock) {
 
     const [count,setCount]= useState(1)
