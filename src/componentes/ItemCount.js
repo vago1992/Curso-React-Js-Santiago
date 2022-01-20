@@ -5,24 +5,24 @@ import './Menu.css';
 
 
 
-export default function ItemCount(stock) {
+export default function ItemCount(stock, onAdd) {
 
-    const [count,setCount]= useState(1)
+    const [contador,setCount]= useState(1)
 
 
     //const count=0
-    const handleCount=()=>{
-        if (count<stock.stock){
+    const sumarAlCarrito=()=>{
+        if (contador<stock.stock){
             //     count=count+1;
-            setCount(count+1)
+            setCount(contador+1)
 
             //setFechaYHora(Date)
         }
     
     }
-    const reduceCount=()=>{
-        if (count>1){
-            setCount(count-1)
+    const restarAlCarrito=()=>{
+        if (contador>1){
+            setCount(contador-1)
         }     
     }
     
@@ -30,11 +30,11 @@ export default function ItemCount(stock) {
         <div className='moduloCompras'>
             <fieldset className='recuadro'>
                 <p>Camisa Manga Larga</p>
-                <button onClick={handleCount} className='countSum'>+</button>
-                {count}
-                <button onClick={reduceCount} className='countExtract'>-</button>
+                <button onClick={sumarAlCarrito} className='countSum'>+</button>
+                {contador}
+                <button onClick={restarAlCarrito} className='countExtract'>-</button>
                 <br></br>
-                <button>Agregar Carrito</button> 
+                <button onClick={()=>onAdd(contador)}>Agregar Carrito</button> 
 
             </fieldset>
               
