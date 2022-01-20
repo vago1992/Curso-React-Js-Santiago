@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 export default function Items({producto}) {
@@ -10,7 +11,7 @@ export default function Items({producto}) {
             <h3>Precio:{producto.precio}</h3>
             {producto.foto}
             <br/>
-            <button className='botonProd'>Detalles producto</button>
+            <Link to={"/detalle/1"}><button className='botonProd'>Detalles producto</button></Link>
             
         </div>
     )

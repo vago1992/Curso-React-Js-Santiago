@@ -40,7 +40,6 @@ export default function ItemListContainer() {
                 <h2>Cargando...</h2> 
             ):(
                 <><Saludo saludo="Bienvenidos a mi E-Comerce" />
-                <ItemCount stock={10} />
                 <ItemList productos={productos} />
                 </>
             )}

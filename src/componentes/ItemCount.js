@@ -34,7 +34,7 @@ export default function ItemCount(stock, onAdd) {
                 {contador}
                 <button onClick={restarAlCarrito} className='countExtract'>-</button>
                 <br></br>
-                <button onClick={()=>onAdd(contador)}>Agregar Carrito</button> 
+                <button onClick={() => onAdd(contador)}>Agregar Carrito</button> 
 
             </fieldset>
               

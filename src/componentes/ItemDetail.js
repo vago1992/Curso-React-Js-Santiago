@@ -8,9 +8,9 @@ import ItemCount from './ItemCount'
 export default function ItemDetail({producto}) {
     const[show,setShow]=useState(true)
     const onAdd=(contador)=>{
-    setShow(false)
-   /* sumarAlCarrito({...product, cantidad: contador})*/
-}
+        setShow(false)
+        /* sumarAlCarrito({...product, cantidad: contador})*/
+    }
 
     return (
         <div>
@@ -18,8 +18,8 @@ export default function ItemDetail({producto}) {
             <h3>Precio:{producto.precio}</h3>
             <h3>Stock:{producto.stock}</h3>
             {producto.foto}
-            {/*<Input/>*/}
-            <Intercambiabilidad/>
+            {/*<Input/>
+            <Intercambiabilidad/>*/}
             {show ? <ItemCount stock={producto.stock} onAdd={onAdd}/>: <Link to={"/cart"}><button>Finalizar Compra</button></Link>}
         </div>
     )
