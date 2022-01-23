@@ -1,9 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Input } from './input'
-import { Intercambiabilidad } from './Intercambiabilidad'
 import ItemCount from './ItemCount'
-import { useContext } from 'react'
 import { CartContex } from '../context/cartContext'
 
 

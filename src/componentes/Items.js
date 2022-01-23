@@ -11,7 +11,7 @@ export default function Items({producto}) {
             <h3>Precio:{producto.precio}</h3>
             {producto.foto}
             <br/>
-            <Link to={"/detalle/1"}><button className='botonProd'>Detalles producto</button></Link>
+            <Link to={`/detalle/${producto.id}`}><button className='botonProd'>Detalles producto</button></Link>
             
         </div>
     )
