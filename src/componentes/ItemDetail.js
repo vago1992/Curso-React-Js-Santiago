@@ -5,12 +5,13 @@ import { CartContex } from '../context/cartContext'
 
 
 export default function ItemDetail({producto}) {
-    const{cartList, agregarAlCarrito}=useContext(CartContex)
+    /*const{cartList, agregarAlCarrito}=useContext(CartContex)*/
     const[show,setShow]=useState(true)
     const onAdd=(contador)=>{
         setShow(false)
-        agregarAlCarrito({...producto, cantidad:contador})
-        /* sumarAlCarrito({...product, cantidad: contador})*/
+        console.log(contador)
+        
+        /*agregarAlCarrito({...producto, cantidad:contador}) */
     }
 
     return (
@@ -21,8 +22,16 @@ export default function ItemDetail({producto}) {
             {producto.foto}
             {/*<Input/>
             <Intercambiabilidad/>*/}
-            {show ? <ItemCount stock={producto.stock} onAdd={onAdd}/>: <Link to={"/cart"}><button>Finalizar Compra</button></Link>}
+            
+            {show ? <ItemCount stock={producto.stock} onAdd={onAdd}/>: 
+                <div>
+                    <Link to={"/cart"}><button>Finalizar Compra</button></Link>
+                    <Link to={"/"}><button>Seguir Comprando</button></Link>
+                </div>}
+            
         </div>
+
     )
+
 }
 
