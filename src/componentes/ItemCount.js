@@ -5,7 +5,7 @@ import './Menu.css';
 
 
 
-export default function ItemCount(stock, onAdd) {
+export default function ItemCount({stock, onAdd}) {
     const [contador,setCount]= useState(1)
     const sumarAlCarrito=()=>{
         if (contador<stock.stock){
