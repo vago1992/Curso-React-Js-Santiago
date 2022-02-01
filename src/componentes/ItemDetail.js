@@ -5,13 +5,12 @@ import { CartContex } from '../context/cartContext'
 
 
 export default function ItemDetail({producto}) {
-    /*const{cartList, agregarAlCarrito}=useContext(CartContex)*/
     const[show,setShow]=useState(true)
+    const{addToCart}=useContext(CartContex)
+
     const onAdd=(contador)=>{
-        setShow(false)
-        console.log(contador)
-        
-        /*agregarAlCarrito({...producto, cantidad:contador}) */
+        addToCart(producto,contador)
+        setShow(false)   
     }
 
     return (
