@@ -5,9 +5,11 @@ export const CartContex = createContext([])
 
 export const CartContexProvider =({children})=>{
     const [cartlist,setCartlist]=useState([])
+    
     function addToCart(items, cantidad){
         if (isOnCartlist(items.id)){
             console.log("Ya esta en el carrito")
+            sumarCantidad(items,cantidad)
         }else{
             setCartlist([...cartlist,{...items,cantidad}])
         };
@@ -26,10 +28,22 @@ export const CartContexProvider =({children})=>{
         const itemFiltrado= cartlist.filter((producto)=>producto.id != id);
         setCartlist(itemFiltrado)
     }
+    const vaciarCarrito=()=>{
+        setCartlist([])
+    }
+    const total=()=>{
+        const totalCarrito=cartlist.reduce((prev,curr)=>prev+curr.price*curr.cantidad,
+        0
+        );
+        return totalCarrito
+    }
     return(
         <CartContex.Provider value={{
             cartlist,
-            addToCart
+            addToCart,
+            deleteItem,
+            vaciarCarrito,
+            total
         }}>
             {children}
         </CartContex.Provider>
