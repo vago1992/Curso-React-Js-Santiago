@@ -17,6 +17,7 @@ export const CartContexProvider =({children})=>{
     const isOnCartlist=(id)=>{
         const carrito=cartlist.some((prod)=>prod.id===id);
         console.log(carrito)
+        return carrito;
     }
     const sumarCantidad=(item,cantidad)=>{
         const copia=[...cartlist]
@@ -25,7 +26,7 @@ export const CartContexProvider =({children})=>{
         });
     } 
     const deleteItem=(id)=>{
-        const itemFiltrado= cartlist.filter((producto)=>producto.id != id);
+        const itemFiltrado= cartlist.filter((producto)=>producto.id !== id);
         setCartlist(itemFiltrado)
     }
     const vaciarCarrito=()=>{

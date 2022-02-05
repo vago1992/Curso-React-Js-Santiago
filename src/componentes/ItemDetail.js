@@ -22,7 +22,7 @@ export default function ItemDetail({producto}) {
             {/*<Input/>
             <Intercambiabilidad/>*/}
             
-            {show ? <ItemCount stock={producto.stock} onAdd={onAdd}/>: 
+            {show ? <ItemCount stock={producto.stock} onAdd={onAdd} initial={1}/>: 
                 <div>
                     <Link to={"/cart"}><button>Finalizar Compra</button></Link>
                     <Link to={"/"}><button>Seguir Comprando</button></Link>

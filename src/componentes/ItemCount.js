@@ -2,16 +2,13 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import './Menu.css';
  
+const initial=0
 
-
-
-export default function ItemCount({stock, onAdd}) {
+export default function ItemCount({stock, onAdd, initial}) {
     const [contador,setCount]= useState(1)
     const sumarAlCarrito=()=>{
         if (contador<stock.stock){
             setCount(contador+1)
-
-
         }
     }
     const restarAlCarrito=()=>{
