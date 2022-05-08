@@ -1,5 +1,4 @@
 import React from 'react'
-import ItemCount from './ItemCount'
 import Saludo from './Saludo'
 import { useState, useEffect } from 'react'
 import { Products } from './mocks/products'

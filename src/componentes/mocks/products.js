@@ -1,15 +1,16 @@
-import { useState, useEffect } from 'react'
-import pcGamer from "./imagenes/pcGamer.png";
-import laptop from "./imagenes/laptop.png";
-import iphone from "./imagenes/iphone.png";
-import SmartTv from "./imagenes/SmartTv.png";
+import naruto from "./imagenes/Naruto.jpg";
+import jujutsu from "./imagenes/Jujutsu.jpeg";
+import berserk from "./imagenes/Berserk.jpg";
+import aot from "./imagenes/Attack on titan.jpg";
+import DrStone from "./imagenes/Dr stone.jpg";
 import './products.css';
 
 const productos=[
-    {id:"1", nombre:"Smart TV",price:25000, precio:"$25.000",stock:100, categoria:"TV", foto:<img src={SmartTv} className="fotoProducto"/>},
-    {id:"2", nombre:"PC Gamer", price:180000,precio:"$180.000",stock:55, categoria:"PC", foto:<img src={pcGamer} className="fotoProducto"/>},
-    {id:"3", nombre:"Iphone 13", price:560000,precio:"$560.000",stock:65, categoria:"Celulares", foto:<img src={iphone} className="fotoProducto"/>},
-    {id:"4", nombre:"Laptop", price:120000,precio:"$120.000",stock:85, categoria:"PC", foto:<img src={laptop} className="fotoProducto"/>}
+    {id:"1", nombre:"Naruto #1",price:650, precio:"$650",stock:100, categoria:"Manga", foto:<img src={naruto} className="fotoProducto"/>},
+    {id:"2", nombre:"Jujutsu Kaisen #12", price:650,precio:"$650",stock:55, categoria:"Manga", foto:<img src={jujutsu} className="fotoProducto"/>},
+    {id:"3", nombre:"Berserk #28", price:650,precio:"$650",stock:65, categoria:"Manga", foto:<img src={berserk} className="fotoProducto"/>},
+    {id:"4", nombre:"Attack on Titan #30", price:850,precio:"$850",stock:85, categoria:"Manga", foto:<img src={aot} className="fotoProducto"/>},
+    {id:"5", nombre:"Dr Stone #4", price:650,precio:"$650",stock:85, categoria:"Manga", foto:<img src={DrStone} className="fotoProducto"/>}
 
 ];
 

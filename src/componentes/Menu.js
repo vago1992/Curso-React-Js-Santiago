@@ -1,6 +1,7 @@
 import React from "react";
 import './Menu.css';
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 function Menu (){
     return (
@@ -8,19 +9,19 @@ function Menu (){
             <nav>
                 <ul className="menu">
                     <li>
-                        <a href="index.html">Home</a>
+                        <Link to={"/"}>Home</Link>
                     </li>
                     <li>
-                        <a href="nosotros.html">Nosotros</a>
+                        <Link to={"/Mangas"}>Mangas</Link>
                     </li>
                     <li>
-                        <a href="servicios.html">Servicios</a>
+                        <Link to={"/Comics"}>Comics</Link>
                     </li>
                     <li>
-                        <a href="galeria.html">Galeria</a>
+                        <Link to={"/Merchandising"}>Merchandising</Link>
                     </li>
                     <li>
-                        <a href="contacto.html">Contacto</a>            
+                        <Link to={"/Contacto"}>Contacto</Link>
                     </li>
                     <li>
                         
